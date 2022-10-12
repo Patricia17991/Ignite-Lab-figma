@@ -3,7 +3,7 @@ import {Text, TextProps} from './Text';
 
 export default { //sempre esportar como default
     title: 'Components/Text', //titulo da documentação
-    Component: Text, //componente que estou exportando
+    component: Text, //componente que estou exportando
     args: {
         children: 'Lorem ipsum.',
     },
