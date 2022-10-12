@@ -1,9 +1,9 @@
 import {Meta,StoryObj} from '@storybook/react';
-import {Heading, HeadingProps} from './Heading';
+import {Text, TextProps} from './Text';
 
 export default { //sempre esportar como default
-    title: 'Components/Heading', //titulo da documentação
-    component: Heading, //componente que estou exportando
+    title: 'Components/Text', //titulo da documentação
+    component: Text, //componente que estou exportando
     args: {
         children: 'Lorem ipsum.',
         size: 'md',
@@ -16,26 +16,26 @@ export default { //sempre esportar como default
             }
         }
     },
-} as Meta<HeadingProps>
+} as Meta<TextProps>
 
 //para corrigir o erro no storybook.
 //precisa exportar pelo menos uma variante: que não está como default
-export const Default: StoryObj<HeadingProps> = {}
+export const Default: StoryObj<TextProps> = {}
 
-export const Small: StoryObj<HeadingProps> = {
+export const Small: StoryObj<TextProps> = {
     args: {
         size: 'sm'
     }
 }
 
-export const Large: StoryObj<HeadingProps> = {
+export const Large: StoryObj<TextProps> = {
     args: {
         size: 'lg'
     }
 }
 
 
-export const CustomComponent: StoryObj<HeadingProps> = {
+export const CustomComponent: StoryObj<TextProps> = {
     args:{
         asChild: true,
         children: (
@@ -46,9 +46,14 @@ export const CustomComponent: StoryObj<HeadingProps> = {
       children: {
         table: {
             disable: true,
-        },
-      },
+        }
     },
-};
+        asChild: {
+            table:{
+                disable: true,
+            }
+      }
+    }
+}
 
 
