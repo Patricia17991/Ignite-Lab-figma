@@ -12,4 +12,4 @@ export default { //sempre esportar como default
 
 //para corrigir o erro no storybook.
 //precisa exportar pelo menos uma variante: que não está como default
-export const Default: StoryObj<TextInputInputProps> = {}
+export const Default: StoryObj<TextInputRootProps> = {}
