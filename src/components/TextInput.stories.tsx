@@ -3,7 +3,7 @@ import {TextInput, TextInputInputProps} from './TextInput';
 
 export default { //sempre esportar como default
     title: 'Components/TextInput', //titulo da documentação
-    component: TextInput.Input, //componente que estou exportando
+    component: TextInput.Root, //componente que estou exportando
     args: {
         placeholder: 'Type your e-mail address',
     },
