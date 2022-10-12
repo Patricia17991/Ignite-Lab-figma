@@ -6,6 +6,7 @@ export default { //sempre esportar como default
     component: Text, //componente que estou exportando
     args: {
         children: 'Lorem ipsum.',
+        size: 'md',
     },
     argsTypes: {
         size: {
@@ -40,8 +41,14 @@ export const CustomComponent: StoryObj<TextProps> = {
         children: (
             <p>Testando</p>
         )
+    },
+    argTypes: {
+      children: {
+        control: {
+            type: null,
+        }
+      }
     }
 }
 
 
-//aula 02 53:29
