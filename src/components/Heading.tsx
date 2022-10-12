@@ -26,3 +26,5 @@ export function Heading({size = 'md', children, asChild} : HeadingProps){
        </Comp>
     );
 }
+
+    
