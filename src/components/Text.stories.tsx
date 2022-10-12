@@ -44,11 +44,12 @@ export const CustomComponent: StoryObj<TextProps> = {
     },
     argTypes: {
       children: {
-        control: {
-            type: null,
-        }
-      }
-    }
-}
+        table: {
+            disable: true,
+        },
+      },
+    },
+};
 
 
+//aula 02 53:29
