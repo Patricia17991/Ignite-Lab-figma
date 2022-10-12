@@ -1,5 +1,5 @@
 import {Meta,StoryObj} from '@storybook/react';
-import {TextInput, TextInputInputProps} from './TextInput';
+import {TextInput, TextInputInputProps, TextInputRootProps} from './TextInput';
 
 export default { //sempre esportar como default
     title: 'Components/TextInput', //titulo da documentação
