@@ -7,6 +7,14 @@ export default { //sempre esportar como default
     args: {
         children: 'Lorem ipsum.',
     },
+    argsTypes: {
+        size: {
+            options: ['sm', 'md', 'lg'],
+            control: {
+              type: 'inline-radio'
+            }
+        }
+    },
 } as Meta<TextProps>
 
 //para corrigir o erro no storybook.
@@ -24,3 +32,16 @@ export const Large: StoryObj<TextProps> = {
         size: 'lg'
     }
 }
+
+
+export const CustomComponent: StoryObj<TextProps> = {
+    args:{
+        asChild: true,
+        children: (
+            <p>Testando</p>
+        )
+    }
+}
+
+
+//aula 02 53:29
