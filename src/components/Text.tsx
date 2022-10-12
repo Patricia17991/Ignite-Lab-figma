@@ -1,35 +1,31 @@
-import {InputHTMLAttributes, ReactNode} from 'react';
+import {Slot} from '@radix-ui/react-slot';
+import {clsx} from 'clsx';
+import {ReactNode} from 'react';
 
 
-
-export interface TextInputRootProps {
+export interface TextProps{
+    size?: 'sm'| 'md'| 'lg';
     children: ReactNode;
+    asChild?: boolean; 
+    className?: string;
 }
 
-function TextInputRoot(props: TextInputRootProps) {
+export function Text({size = 'md', children, asChild, className} : TextProps){
+    const Comp = asChild ? Slot : 'span';
+
     return(
-        <div className="flex items-center gap-3 py-4 px-3 rounded bg-gray-800 w-full outline-none focus:ring-2 ring-cyan-300">
-           {props.children}
-        </div>
-    )
-}
-
-//function TextInputIcon() {}
-
-export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElement> {}
-
-
-function TextInputInput(props : TextInputInputProps){
-    return(
-       <input 
-         className="bg-transparent flex-1  text-gray-100 text-xs placeholder:text-gray-400 "
-             {...props}
-        />
- )
-}
-
-export const TextInput = {
-    Root: TextInputRoot,
-    Input: TextInputInput,
-    //Text: TextInputIcon,
+       <Comp 
+         className={clsx(
+          'text-gray-100 font-sans', 
+       {
+        'text-xs': size === 'sm',
+        'text-sm': size === 'md',
+        'text-md': size === 'lg',
+       },
+       className,
+    )}
+       >
+        {children}
+       </Comp>
+    );
 }
