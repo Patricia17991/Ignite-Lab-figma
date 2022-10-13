@@ -8,7 +8,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     asChild?: boolean; 
 }
 
-export function Button({children, asChild} : ButtonProps){
+export function Button({children, asChild, ...props} : ButtonProps){
     const Comp = asChild ? Slot : 'button';
 
     return(
@@ -16,6 +16,7 @@ export function Button({children, asChild} : ButtonProps){
          className={clsx(
             'py-4 px-3 bg-cyan-500 rounded font-semibold text-black text-sm w-full transition-colors hover:bg-cyan-300 focus:ring-2 ring-white',
     )}
+    {...props}
        >
         {children}
        </Comp>
