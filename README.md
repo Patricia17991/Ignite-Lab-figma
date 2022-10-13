@@ -6,4 +6,4 @@ Segue o link do layout que desenvolvemos:
 
 https://www.figma.com/proto/adtxrLj48CidB0y5WrVIET/Ignite-Lab-Design-System?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1
 
-![Ignite-Lab-figma](https://github.com/Patricia17991/Clone-netflix/blob/main/img-lucifer.png?raw=true) 
+![Ignite-Lab-figma](https://github.com/Patricia17991/Ignite-Lab-figma/blob/main/layout.png?raw=true) 
